@@ -1,7 +1,7 @@
-**CASE1**
+# CASE1
 
-**Attacker : ** 192.168.106.141
-**Victim : ** 192.168.106.142
+**Attacker :** 192.168.106.141
+**Victim :** 192.168.106.142
 
 
 ## STEP1. Initial Access : External Remote Services(T1133)
