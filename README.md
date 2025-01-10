@@ -10,6 +10,7 @@ Support : OpenVPN, Remote Desktop Protocol (RDP) with NLA support, SSH private k
 ### Attacker
 
 ![image](https://github.com/user-attachments/assets/f94a5ef2-97ab-4edd-8a95-6144de8257d4)
+
 [RDP port scan with masscan tool]
 
 
@@ -29,7 +30,9 @@ Discovered open port 30039/tcp on 192.168.106.142
 ```
 
 ![image](https://github.com/user-attachments/assets/d5e815a5-20b5-4d2b-8fbb-6638e739ce00)
+
 [RDP logon Dictionary Attack with crowbar tool]
+
 ```shell
 ┌──(root㉿kali)-[/home/kali/Attack_Tool/CASE1]
 └─# ls
