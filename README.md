@@ -73,3 +73,19 @@ Administrator
 2025-01-10 17:15:45 STOP
 
 ```
+
+Attack Tools : xfreerdp
+xfreerdp: https://linux.die.net/man/1/xfreerdpㄴ An X11 Remote Desktop Protocol (RDP) client that is part of the FreeRDP project, enabling RDP access in Linux environments.
+
+![image](https://github.com/user-attachments/assets/238f67a0-ac40-46ec-a21f-eddec0fef27f)
+
+[Connect RDP to xfreerdp]
+
+```shell
+
+```
+
+
+
+
+
