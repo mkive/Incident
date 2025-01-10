@@ -9,7 +9,7 @@
 Attack Tools : masscan, crowbar
 - masscan - port scanner : https://github.com/robertdavidgraham/masscan
 - Crowbar - Brute forcing tool : https://github.com/galkan/crowbar
-Support : OpenVPN, Remote Desktop Protocol (RDP) with NLA support, SSH private key authentication, VNC key authentication
+- Support : OpenVPN, Remote Desktop Protocol (RDP) with NLA support, SSH private key authentication, VNC key authentication
 
 ### Attacker
 
