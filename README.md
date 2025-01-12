@@ -3,12 +3,12 @@
 **Attacker :** 192.168.106.141
 **Victim :** 192.168.106.142
 
-------------------------------
+
 
 ## STEP1. Initial Access : External Remote Services(T1133)
 Using masscan for RDP port scanning and crowbar for Dictionary Attacks to attempt RDP logon.
 
-| Attack Tools : masscan, crowbar
+>> Attack Tools : masscan, crowbar
 |- masscan - port scanner : https://github.com/robertdavidgraham/masscan
 |- Crowbar - Brute forcing tool : https://github.com/galkan/crowbar
 |- Support : OpenVPN, Remote Desktop Protocol (RDP) with NLA support, SSH private key authentication, VNC key authentication
