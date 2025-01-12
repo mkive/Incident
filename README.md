@@ -202,7 +202,6 @@ C:\Users\testuser>
 ```
 
 > Reference : https://learn.microsoft.com/ko-kr/security-updates/security/20214024
-
 > Using Run as
 > You can use Run As in a number of different ways, including the following
 > To use Run As to start a command shell that uses the domain administrator account credentials
