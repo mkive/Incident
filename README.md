@@ -202,6 +202,7 @@ C:\Users\testuser>
 ```
 
 > Reference : https://learn.microsoft.com/ko-kr/security-updates/security/20214024
+
 > Using Run as
 > You can use Run As in a number of different ways, including the following
 > To use Run As to start a command shell that uses the domain administrator account credentials
@@ -209,6 +210,7 @@ C:\Users\testuser>
 > 2. In the Run dialog box, type runas /user:<domain_name>\administrator cmd, where <domain_name> is your domain name, and then click OK.
 > 3. When a dialog box appears prompting you to enter a password for the domain_name\administrator account, type the administrator account password and press ENTER.
 > 4. A new console window opens, running in administrator context. The console title identifies itself as running as domain_name**\administrator**.
+
 
 
 
