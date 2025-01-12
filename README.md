@@ -100,6 +100,8 @@ An X11 Remote Desktop Protocol (RDP) client that is part of the FreeRDP project,
 
 
 ## STEP2. Execution : Command and Scripting Interpreter(T1059)
+| Download netcat and JuicyPotato Attack Tool on the attacker’s server, establish reverse shell through netcat to remotely execute cmd commands.
+
 
 ### Attacker
 ```shell
@@ -202,6 +204,9 @@ C:\Users\testuser>![image](https://github.com/user-attachments/assets/4ca929bf-9
 
 
 ## STEP3. Privilege Escalation : Abuse Elevation Control Mechanism(T1548)
+| Escalate to SYSTEM privilege using the privilege escalation tool JuicyPotato.
+
+
 Attack Tools : JuicyPotato(bunny.exe)
 
 ![image](https://github.com/user-attachments/assets/0460906c-9835-4cab-9f32-7ab4386faee0)
