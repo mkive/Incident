@@ -607,11 +607,11 @@ SID               : S-1-5-18
 
 mimikatz # 
 
-![image](https://github.com/user-attachments/assets/42a7b4c2-e1c6-490b-a69d-d3147b332f65)
 
 ```
 ![image](https://github.com/user-attachments/assets/ad9b639a-56a1-4f8e-ae9f-05412296ab9f)
-![image](https://github.com/user-attachments/assets/d539c16f-9c50-49fb-8b49-18702fd53857)
+![image](https://github.com/user-attachments/assets/e51790d6-af82-48dc-b448-3f99517659fe)
+
 _[ Check user account information and plaintext password ]_
 
 
