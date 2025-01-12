@@ -17,6 +17,7 @@ Using masscan for RDP port scanning and crowbar for Dictionary Attacks to attemp
 ### Attacker
 
 ![image](https://github.com/user-attachments/assets/f94a5ef2-97ab-4edd-8a95-6144de8257d4)
+
 _[RDP port scan with masscan tool]_
 
 
@@ -35,8 +36,11 @@ Discovered open port 30039/tcp on 192.168.106.142
 
 ```
 
+
 ![image](https://github.com/user-attachments/assets/d5e815a5-20b5-4d2b-8fbb-6638e739ce00)
+
 _[RDP logon Dictionary Attack with crowbar tool]_
+
 
 ```shell
 ┌──(root㉿kali)-[/home/kali/Attack_Tool/CASE1]
@@ -79,19 +83,19 @@ Administrator
 
 ```
 
-Attack Tools : xfreerdp
-- xfreerdp: https://linux.die.net/man/1/xfreerdp
-An X11 Remote Desktop Protocol (RDP) client that is part of the FreeRDP project, enabling RDP access in Linux environments.
+> Attack Tools : xfreerdp
+> xfreerdp: https://linux.die.net/man/1/xfreerdp
+> An X11 Remote Desktop Protocol (RDP) client that is part of the FreeRDP project, enabling RDP access in Linux environments.
 
 ![image](https://github.com/user-attachments/assets/238f67a0-ac40-46ec-a21f-eddec0fef27f)
+
 _[Connect RDP to xfreerdp]_
 
-```shell
 
-```
 
 ![image](https://github.com/user-attachments/assets/a3174dd7-ab96-48c8-a5a7-16bf96dec33e)
 _[The victim's credentials don't match ]_
+
 
 
 ## STEP2. Execution : Command and Scripting Interpreter(T1059)
@@ -108,8 +112,10 @@ Download netcat and JuicyPotato Attack Tool on the attacker’s server, establis
 ![image](https://github.com/user-attachments/assets/2855a712-9824-4c9b-aac6-e0417984f23a)
 _[ Download netcat and JuicyPotato(bunny.exe) from Attacker server]_
 
+
 ![image](https://github.com/user-attachments/assets/12db89a9-05b9-451b-bece-0faf15d44333)
 _[Detection Windows Defender Security Center]_
+
 
 ### Attacker
 ![image](https://github.com/user-attachments/assets/951621b2-94ba-4249-acbd-77b61b14c48f)
@@ -159,7 +165,7 @@ PS C:\Users\testuser>
 
 ```
 
-Administrator Permission Console(cmd)
+[Administrator Permission Console(cmd)]
 
 ![image](https://github.com/user-attachments/assets/ebe13ef1-0115-49c3-876e-23cbc4af3d4e)
 _[ Check permission 'SeImpersonatePrivilege' for privilege escalation vulnerabilities ]_
