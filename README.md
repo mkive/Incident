@@ -17,8 +17,7 @@ Using masscan for RDP port scanning and crowbar for Dictionary Attacks to attemp
 ### Attacker
 
 ![image](https://github.com/user-attachments/assets/f94a5ef2-97ab-4edd-8a95-6144de8257d4)
-
-[RDP port scan with masscan tool]
+_[RDP port scan with masscan tool]_
 
 
 ```shell
@@ -37,8 +36,7 @@ Discovered open port 30039/tcp on 192.168.106.142
 ```
 
 ![image](https://github.com/user-attachments/assets/d5e815a5-20b5-4d2b-8fbb-6638e739ce00)
-
-[RDP logon Dictionary Attack with crowbar tool]
+_[RDP logon Dictionary Attack with crowbar tool]_
 
 ```shell
 ┌──(root㉿kali)-[/home/kali/Attack_Tool/CASE1]
@@ -86,19 +84,18 @@ Attack Tools : xfreerdp
 An X11 Remote Desktop Protocol (RDP) client that is part of the FreeRDP project, enabling RDP access in Linux environments.
 
 ![image](https://github.com/user-attachments/assets/238f67a0-ac40-46ec-a21f-eddec0fef27f)
-
-[Connect RDP to xfreerdp]
+_[Connect RDP to xfreerdp]_
 
 ```shell
 
 ```
 
 ![image](https://github.com/user-attachments/assets/a3174dd7-ab96-48c8-a5a7-16bf96dec33e)
-[The victim's credentials don't match ]
+_[The victim's credentials don't match ]_
 
 
 ## STEP2. Execution : Command and Scripting Interpreter(T1059)
-| Download netcat and JuicyPotato Attack Tool on the attacker’s server, establish reverse shell through netcat to remotely execute cmd commands.
+Download netcat and JuicyPotato Attack Tool on the attacker’s server, establish reverse shell through netcat to remotely execute cmd commands.
 
 
 ### Attacker
@@ -109,19 +106,19 @@ An X11 Remote Desktop Protocol (RDP) client that is part of the FreeRDP project,
 ```
 ### Victim
 ![image](https://github.com/user-attachments/assets/2855a712-9824-4c9b-aac6-e0417984f23a)
-[ Download netcat and JuicyPotato(bunny.exe) from Attacker server]
+_[ Download netcat and JuicyPotato(bunny.exe) from Attacker server]_
 
 ![image](https://github.com/user-attachments/assets/12db89a9-05b9-451b-bece-0faf15d44333)
-[Detection Windows Defender Security Center]
+_[Detection Windows Defender Security Center]_
 
 ### Attacker
 ![image](https://github.com/user-attachments/assets/951621b2-94ba-4249-acbd-77b61b14c48f)
-[Connect reverse shell to 4445 port using netcat(nc64.exe)]
+_[Connect reverse shell to 4445 port using netcat(nc64.exe)]_
 
 
 
 ![image](https://github.com/user-attachments/assets/ffdb0774-7d1a-4878-9dcd-d420fe71727b)
-[ Verify testuser account’s permissions and run cmd with Administrator privilege Enter testuser password stolen by Dictionary Attack ]
+_[ Verify testuser account’s permissions and run cmd with Administrator privilege Enter testuser password stolen by Dictionary Attack ]_
 
 
 ```shell
@@ -165,7 +162,7 @@ PS C:\Users\testuser>
 Administrator Permission Console(cmd)
 
 ![image](https://github.com/user-attachments/assets/ebe13ef1-0115-49c3-876e-23cbc4af3d4e)
-[ Check permission 'SeImpersonatePrivilege' for privilege escalation vulnerabilities ]
+_[ Check permission 'SeImpersonatePrivilege' for privilege escalation vulnerabilities ]_
 
 
 
@@ -193,7 +190,7 @@ SeImpersonatePrivilege        Impersonate a client after authentication Enabled
 SeIncreaseWorkingSetPrivilege Increase a process working set            Disabled
 SeTimeZonePrivilege           Change the time zone                      Disabled
 
-C:\Users\testuser>![image](https://github.com/user-attachments/assets/4ca929bf-9c94-4201-9950-c4f92366fc4d)
+C:\Users\testuser>
 
 ```
 
@@ -202,13 +199,13 @@ C:\Users\testuser>![image](https://github.com/user-attachments/assets/4ca929bf-9
 
 
 ## STEP3. Privilege Escalation : Abuse Elevation Control Mechanism(T1548)
-| Escalate to SYSTEM privilege using the privilege escalation tool JuicyPotato.
+Escalate to SYSTEM privilege using the privilege escalation tool JuicyPotato.
 
 
-Attack Tools : JuicyPotato(bunny.exe)
+> Attack Tools : JuicyPotato(bunny.exe)
 
 ![image](https://github.com/user-attachments/assets/0460906c-9835-4cab-9f32-7ab4386faee0)
-[ Using JuicyPotato(bunny.exe) to steal SYSTEM privilege ]
+_[ Using JuicyPotato(bunny.exe) to steal SYSTEM privilege ]_
 
 
 ```shell
