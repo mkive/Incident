@@ -165,7 +165,8 @@ PS C:\Users\testuser>
 
 ```
 
-[Administrator Permission Console(cmd)]
+![image](https://github.com/user-attachments/assets/44e9409f-e927-4d60-8209-a8c826e4d712)
+_[Administrator Permission Console(cmd)]_
 
 ![image](https://github.com/user-attachments/assets/ebe13ef1-0115-49c3-876e-23cbc4af3d4e)
 _[ Check permission 'SeImpersonatePrivilege' for privilege escalation vulnerabilities ]_
@@ -201,7 +202,6 @@ C:\Users\testuser>
 ```
 
 
-![image](https://github.com/user-attachments/assets/44e9409f-e927-4d60-8209-a8c826e4d712)
 
 
 ## STEP3. Privilege Escalation : Abuse Elevation Control Mechanism(T1548)
