@@ -1,4 +1,4 @@
-# CASE1
+# CASE1. RDP Brute Force Attack
 
 **Attacker :** 192.168.106.141
 **Victim :** 192.168.106.142
@@ -650,6 +650,12 @@ _[ Register service(startService) created in the startup program ]_
 
 ![image](https://github.com/user-attachments/assets/b76eb5a4-0dc4-4201-9fef-52f205265662)
 _[ Restarting the Victim server ]_
+
+
+
+
+
+
 
 
 ![image](https://github.com/user-attachments/assets/c0030d23-26cd-4e7f-93ed-6a3300b1832b)
