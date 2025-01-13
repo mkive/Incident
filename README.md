@@ -90,7 +90,9 @@ Administrator
 ![image](https://github.com/user-attachments/assets/238f67a0-ac40-46ec-a21f-eddec0fef27f)
 
 _[Connect RDP to xfreerdp]_
-
+```shell
+#xfreerdp /u:testuser /p:qwer1234 /v:192.168.106.142:30039
+```
 
 
 ![image](https://github.com/user-attachments/assets/a3174dd7-ab96-48c8-a5a7-16bf96dec33e)
